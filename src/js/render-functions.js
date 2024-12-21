@@ -33,14 +33,16 @@ const imageCardsTemplate = imageArray => {
     .join("")
 }
 
-export function imageInsert() {
+export const imageInsert = () => {
   const gallery = document.querySelector(".gallery");
 
   return {
     add(imageArray) {
       gallery.innerHTML = imageCardsTemplate(imageArray);
     },
-
+    addAdjacent(imageArray) {
+      gallery.insertAdjacentHTML('beforeend', imageCardsTemplate(imageArray))
+    },
     reset() {
       gallery.innerHTML = '';
     }

@@ -30,7 +30,7 @@ ul {
     display: flex;
     flex-wrap: wrap;
     width: 1440px;
-    height: 848px;
+    /*height: 848px;*/
     padding: 0 152px;
     flex-direction: row;
     justify-content: center;
@@ -38,6 +38,7 @@ ul {
     gap: 24px;
     background: #FFF;
     margin: 0 auto;
+    position: relative;
 }
 
 .gallery-item {
@@ -134,7 +135,8 @@ button {
   border: 1px solid #808080;
 }
 
-.submit-btn {
+.submit-btn,
+.load-more-btn {
   border-radius: 8px;
   border: none;
   background: #4E75FF;
@@ -149,6 +151,11 @@ button {
   font-weight: 500;
   line-height: 24px; /* 150% */
   letter-spacing: 0.64px;
+}
+
+.load-more-btn {
+  display: block;
+  margin: 20px auto;
 }
 
 .image-notes {
@@ -172,22 +179,24 @@ button {
 }
 
 .loader {
-  visibility: hidden;
+  /*visibility: hidden;*/
   color: black;
   font-size: 10px;
   width: 1em;
   height: 1em;
   border-radius: 50%;
-  position: absolute;
-  top: 50%;
-  left: 50%;
+  display: block;
+  margin: 40px auto;
+  /*position: absolute;*/
+  /*bottom: 50%;*/
+  /*left: 50%;*/
   text-indent: -9999em;
   animation: mulShdSpin 1.3s infinite linear;
   transform: translateZ(0);
 }
 
-.is-visible {
-  visibility: visible;
+.is-hidden {
+  display: none;
 }
 
 @keyframes mulShdSpin {
