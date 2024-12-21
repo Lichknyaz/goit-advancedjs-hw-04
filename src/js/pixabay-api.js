@@ -12,6 +12,6 @@ export const fetchImagesPixabay = (query, page) => {
     per_page: 15,
   };
 
-  return axios.get('https://pixabay.com/api', {params: searchParams});
+  return axios.get('https://pixabay.com/api/', {params: searchParams});
 }
 
